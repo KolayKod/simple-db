@@ -19,6 +19,7 @@ $db = new \kolaykod\simpledb([
     'database' => 'ecommerce',
     'username' => 'root'
     'password' => 'test',
+      'prefix' =>'prefix',
     'charset'  => 'utf8'
 ]);
 ```
