@@ -9,7 +9,7 @@ PHP için PDO sınıfı
 ## Kurulum ve Kullanım
 
 ```
-$ composer require mlevent/pdb
+$ composer require kolaykod/simpledb
 ```
 
 ### Örnek Kullanım
