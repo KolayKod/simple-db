@@ -15,7 +15,7 @@ $ composer require kolaykod/simpledb
 ### Örnek Kullanım
 
 ```php
-$db = new \Mlevent\Pdb([
+$db = new \kolaykod\simpledb([
     'database' => 'ecommerce',
     'username' => 'root'
     'password' => 'test',
@@ -26,7 +26,7 @@ $db = new \Mlevent\Pdb([
 Sqlite kullanımı için:
 
 ```php
-$db = new \Mlevent\Pdb([
+$db = new \kolaykod\simpledb([
     'driver'   => 'sqlite',
     'database' => 'ecommerce.sqlite'
 ]);
@@ -39,7 +39,7 @@ Yeni bir dizin oluşturarak `src` klasörü altındaki tüm dosyaları içine ko
 ```php
 require '{pdb_dosyalarinin_bulundugu_dizin}/autoload.php';
 
-$db = new \Mlevent\Pdb([
+$db = new \kolaykod\Pdb([
     'database' => 'ecommerce',
     'username' => 'root',
     'password' => 'test',
@@ -808,4 +808,4 @@ Metodlar: `truncate()`, `drop()`, `optimize()`, `analyze()`, `check()`, `checksu
 
 ## Contributors
 
--   [mlevent](https://github.com/mlevent) Mert Levent
+-   [kolaykod](https://github.com/kolaykod) Mert Levent
