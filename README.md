@@ -808,4 +808,4 @@ Metodlar: `truncate()`, `drop()`, `optimize()`, `analyze()`, `check()`, `checksu
 
 ## Contributors
 
--   [kolaykod](https://github.com/kolaykod) Mert Levent
+-   [kolaykod](https://github.com/kolaykod) kolaykod
