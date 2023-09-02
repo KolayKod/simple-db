@@ -3,7 +3,7 @@
 spl_autoload_register(
     function ($class) {
         // project-specific namespace prefix. Will only kicks in for Mlevent's namespace.
-        $prefix = 'Mlevent\\';
+        $prefix = 'kolaykod\\';
 
         // base directory for the namespace prefix.
         $base_dir = __DIR__;   // By default, it points to this same folder.
