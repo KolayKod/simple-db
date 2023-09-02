@@ -1,6 +1,6 @@
 <?php
 
-    namespace Mlevent;
+    namespace simpledb;
 
     use PDO;
     use PDOException;
@@ -9,7 +9,7 @@
     if(!defined('_AND')) define('_AND', 'AND');
     if(!defined('_OR'))  define('_OR',  'OR');
 
-    class Pdb
+    class simpledb
     {
         public $pdo;
         public $config;
