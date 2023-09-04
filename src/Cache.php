@@ -1,6 +1,6 @@
 <?php
 
-namespace Mlevent;
+namespace simpledb;
 
 class Cache
 {
