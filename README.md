@@ -36,7 +36,7 @@ Yeni bir dizin oluşturarak `src` klasörü altındaki tüm dosyaları içine ko
 ```php
 require '{pdb_dosyalarinin_bulundugu_dizin}/autoload.php';
 
-$db = new \kolaykod\Pdb([
+$db = new \kolaykod\simpledb([
     'database' => 'ecommerce',
     'username' => 'root',
     'password' => 'test',
