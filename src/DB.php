@@ -1,6 +1,6 @@
 <?php
 
-    namespace simpledb;
+    namespace DB;
 
     use PDO;
     use PDOException;
