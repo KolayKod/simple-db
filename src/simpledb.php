@@ -11,6 +11,7 @@
 
     class simpledb
     {
+        private static $instance = null;
         public $pdo;
         public $config;
         
