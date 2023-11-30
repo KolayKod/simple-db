@@ -1,6 +1,7 @@
 {
     "name": "kolaykod/simpledb",
     "description": "PHP için özelleştirilmiş PDO sınıfı",
+    "version": "0.1",
     "keywords": [
         "php",
         "pdo",
