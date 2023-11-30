@@ -62,6 +62,19 @@
          *
          * @param array $config
          */
+        /*
+        
+        
+        
+         try {
+            $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
+            $this->conn->exec("set names utf8");
+        } catch(PDOException $exception) {
+            echo "Database connection error: " . $exception->getMessage();
+        }
+        
+        */
+        
         public function __construct($config = null)
         {
             $this->config = [
@@ -79,9 +92,7 @@
             ];
 
             foreach($this->config as $k => $v) 
-                $this->config[$k] = !isset($config[$k]) 
-                    ? $this->config[$k] 
-                    : $config[$k];
+                $this->config[$k] = !isset($config[$k]) ? $this->config[$k] : $config[$k];
 
             $dsnList = [
                 'mysql'  => "dbname={$this->config['database']};host={$this->config['host']}",
@@ -103,7 +114,7 @@
             ];
 
             try {
-                $this->pdo = new PDO("{$this->config['driver']}:{$dsnList[$this->config['driver']]}", $this->config['username'], $this->config['password'], $options);
+                 $this->conn = $this->pdo = new PDO("{$this->config['driver']}:{$dsnList[$this->config['driver']]}", $this->config['username'], $this->config['password'], $options);
 
                 if($this->config['driver'] == 'sqlite')
                     $this->pdo->exec('PRAGMA foreign_keys=ON');
@@ -112,6 +123,17 @@
                 throw new Exception($e->getMessage()); 
             }
         }
+
+
+        public static function getInstance() {
+        if (!self::$instance) {
+            self::$instance = new simpledb();
+        }
+        return self::$instance;
+      }
+
+         private function __clone() { }
+        private function __wakeup() { }
                      
         /**
          * init
