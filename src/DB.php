@@ -1289,7 +1289,7 @@
          * @param void $fetchMode
          * @return mixed
          */
-        public function readQuery($fetch = 'fetch', $fetchMode = PDO::FETCH_BOTH){
+        public function readQuery($fetch = 'fetch', $fetchMode = PDO::FETCH_OBJ){
 
             if(!$fetchMode && $this->fetchMode) $fetchMode = $this->fetchMode;
 
