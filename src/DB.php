@@ -127,7 +127,7 @@
 
         public static function getInstance() {
         if (!self::$instance) {
-            self::$instance = new simpledb();
+            self::$instance = new DB();
         }
         return self::$instance;
       }
