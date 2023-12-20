@@ -22,7 +22,7 @@
         private $fromDisk      = false;
         private $fromRedis     = false;
 
-        private $fetchMode     = null;
+        private $fetchMode     = PDO::FETCH_OBJ;
         private $toJson        = false;
 
         private $queryHistory  = [];
@@ -1289,7 +1289,7 @@
          * @param void $fetchMode
          * @return mixed
          */
-        public function readQuery($fetch = 'fetch', $fetchMode = null){
+        public function readQuery($fetch = 'fetch', $fetchMode = PDO::FETCH_BOTH){
 
             if(!$fetchMode && $this->fetchMode) $fetchMode = $this->fetchMode;
 
