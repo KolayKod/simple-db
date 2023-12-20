@@ -1739,7 +1739,7 @@
         public function showTable($table = null){
             if(!is_null($table)) 
                 $this->table($table);
-            $columns = $this->pdo->query($this->getQueryForDriver('getColumns'))->fetchAll(2);                
+            $columns = $this->pdo->query($this->getQueryForDriver('getColumns'))->fetchAll(PDO::FETCH_BOTH);                
             return call_user_func(array($this, $this->config['driver'] . 'ColParser'), $columns);
         }
 
